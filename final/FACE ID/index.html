@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Saving Images into Local Storage</title>
 </head>
 <body>
     <h1> Save images to Local Storage</h1>
@@ -17,7 +17,7 @@
             const reader = new FileReader ();
 
             reader.addEventListener("load", () => {
-                localStorage.setItem("recent-image", reader.result);  //sets the recent image into local storage.
+                localStorage.setItem("recent-image", reader.result); 
                 console.log(reader.result);
             })
             reader.readAsDataURL(this.files[0]);
