@@ -10,6 +10,14 @@
     <h1> Save images to Local Storage</h1>
     <input type = "fi;e" id= "myFileInput">
     <script>
+        document/querySelector("#myFileInput").addEventListener("change", function () {
+            const reader = new FileReader ();
+            reader.addEventListener("load", ()=> {
+                consle.log(reader.result);
+            })
+            reader.readAsDataURL(this.files[1]);
+
+        })
         </script>
 </body>
 </html>
