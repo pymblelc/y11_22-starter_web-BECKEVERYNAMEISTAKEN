@@ -56,3 +56,6 @@ const ImageAPI = {
 };
 
 globalThis.ImageAPI = ImageAPI;
+
+createRecords("Faces") /*place url into database*/;
+readRecords("Faces"); /*read url*/ 
