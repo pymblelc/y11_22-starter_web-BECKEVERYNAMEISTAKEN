@@ -9,16 +9,28 @@
 <body>
     <h1> Save images to Local Storage</h1>
     <input type = "file" id= "myFileInput">
-    
+    <ig id="imgPreview" src="" alt= "Preview">
+
+    </ig>
     <script>
         document.querySelector("#myFileInput").addEventListener("change", function () {
             const reader = new FileReader ();
 
             reader.addEventListener("load", () => {
-                consle.log(reader.result);
+                localStorage.setItem("recent-image", reader.result);  //sets the recent image into local storage.
+                console.log(reader.result);
             })
             reader.readAsDataURL(this.files[0]);
 
+        })
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const recentImageDataURL = localStorage.getItem("recent-image");
+
+            if (recentImageDataURL) {
+                document.querySelector("#imgPreview").setAttribute("src", recentImageDataURL);
+            }
         })
         </script>
 </body>
