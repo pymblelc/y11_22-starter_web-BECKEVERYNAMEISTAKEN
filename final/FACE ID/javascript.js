@@ -16,4 +16,5 @@ document.addEventListener("DOMContentLoaded", () => {
     if (recentImageDataURL) {
         document.querySelector("#imgPreview").setAttribute("src", recentImageDataURL);
     }
-})
+    console.log("should work man");
+});
