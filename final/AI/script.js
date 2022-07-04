@@ -6,15 +6,15 @@ let imageURL = myImage.src;
 
 myButton.addEventListener("click", function () {
     //myText.I
-    ImageAPI.analyseFaces(imageURL, function (data) {
+    ImageAPI.analyseImage(imageURL, function (data) {
       //  console.log(data[0].faceAttributes.age);  
-      for (let i = 0; i < data.length; i++) {
-        let age = data[i].faceAttributes.age;
-        let lipstick = data[i].faceAttributes.makeup.lipMakeup;
-        let results = '<p>Face ' + (i + 1) + ': age is' + age + ', lipstick = '
-                        + lipstick + '</p>';
+     // for (let i = 0; i < data.length; i++) {
+     //   let age = data[i].faceAttributes.age;
+        //let lipstick = data[i].faceAttributes.makeup.lipMakeup;
+     //   let results = '<p>Face ' + (i + 1) + ': age is' + age + ', lipstick = '
+      //                  + lipstick + '</p>';
         myText.innerHTML += results; 
-      }
+     // }
 
     });
 });
