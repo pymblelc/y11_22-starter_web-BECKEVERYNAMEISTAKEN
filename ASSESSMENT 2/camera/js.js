@@ -32,3 +32,27 @@ cameraClear.onclick = function() {
     cameraSensor.width = "#fff"
     cameraSensor.height = "#fff";
 }
+
+//document.getElementById("taken").src = "test.png";
+
+cameraAnalyse.onclick = function() {
+    analyseImage("taken", callback) 
+        const url = "test.png";
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Ocp-Apim-Subscription-Key": ACS_KEY
+            },
+            body: JSON.stringify({
+                url: imageUrl
+            }),
+        });
+        const data = await response.json();
+        if (callback) {
+            callback(data);
+        }
+    
+        return data;
+    }
+
