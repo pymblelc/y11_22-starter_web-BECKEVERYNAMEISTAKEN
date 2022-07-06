@@ -34,10 +34,12 @@ cameraClear.onclick = function() {
 }
 
 //document.getElementById("taken").src = "test.png";
+const ACS_URL = "https://sddcognitiveservices.cognitiveservices.azure.com";
+const ACS_KEY = "6cdde304144f4e21ac9495a8847dd44e";
 
 cameraAnalyse.onclick = function() {
-    analyseImage("taken", callback) 
-        const url = "test.png";
+   analyseImage(imageUrl, callback) 
+        const url = `${ACS_URL}/vision/v3.2/analyze?visualFeatures=Categories,Description&details=Landmarks`;
         const response = await fetch(url, {
             method: "POST",
             headers: {
@@ -52,7 +54,6 @@ cameraAnalyse.onclick = function() {
         if (callback) {
             callback(data);
         }
-    
-        return data;
-    }
 
+        return data;
+    };
