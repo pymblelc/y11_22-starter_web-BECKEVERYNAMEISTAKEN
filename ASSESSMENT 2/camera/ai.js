@@ -33,6 +33,27 @@ const ImageAPI = {
 
         return data;
     },
+    
+    async describeImage(imageUrl, callback) {
+        const url = `${ACS_URL}/vision/v3.2/analyze?visualFeatures=Categories,Description&details=Landmarks`;
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Ocp-Apim-Subscription-Key": ACS_KEY
+            },
+            body: JSON.stringify({
+                url: imageUrl
+            }),
+        });
+        const data = await response.json();
+        if (callback) {
+            callback(data);
+        }
+
+        return data;
+    },   
+
 
     async analyseFaces(imageUrl, callback) {
         const url = `${ACS_URL}/face/v1.0/detect?returnFaceAttributes=blur,exposure,noise,age,gender,facialhair,glasses,hair,makeup,accessories,occlusion,headpose,emotion,smile&recognitionModel=recognition_04&returnRecognitionModel=false&detectionModel=detection_01&faceIdTimeToLive=86400`;

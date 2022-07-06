@@ -6,6 +6,12 @@ let imageURL = myImage.src;
 
 myButton.addEventListener("click", function () {
     //myText.I
+    q= PIXABAY_URL + "?yellow+flowers&image_type=photo";
+        ImageAPI.searchPhotos( q ,function(imagedata) {
+      results = imagedata;
+      myText.innerHTML = results;
+    })
+    return;
     ImageAPI.analyseImage(imageURL, function (data) {
       //  console.log(data[0].faceAttributes.age);  
      // for (let i = 0; i < data.length; i++) {
@@ -13,6 +19,7 @@ myButton.addEventListener("click", function () {
         //let lipstick = data[i].faceAttributes.makeup.lipMakeup;
      //   let results = '<p>Face ' + (i + 1) + ': age is' + age + ', lipstick = '
       //                  + lipstick + '</p>';
+      let results = "test";
         myText.innerHTML += results; 
      // }
 
@@ -31,7 +38,7 @@ ImageAPI.annalyseFaces(imageURL, function(data){
         results.innerHTML = finalInfo;
 */
 
-import 'js-camera';
+/*import 'js-camera';
 
 // Camera element
 const camera = document.querySelector('#camera');
@@ -84,3 +91,4 @@ document.querySelector('#btnCapture').addEventListener('click', () => {
   });
   console.log(`Resize capture: ${base64}`);// Resize capture: data:image/png;base64,iVBORw0K
 });
+*/
