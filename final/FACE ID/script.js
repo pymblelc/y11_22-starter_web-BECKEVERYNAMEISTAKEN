@@ -1,3 +1,4 @@
+//local storage
 document.querySelector("#myFileInput").addEventListener("change", function () {
     const reader = new FileReader ();
 
@@ -18,3 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     console.log("should work man");
 });
+
+let myObject = {
+    name: "Domenic",
+    age : 56,
+};
+
+localStorage.setItem("myObject", myObject);

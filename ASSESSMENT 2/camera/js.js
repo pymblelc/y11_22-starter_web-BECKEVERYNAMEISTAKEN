@@ -1,3 +1,8 @@
+// var something = localStorage.setItem('image', '');
+// localStorage.getItem('image');
+// localStorage.setItem('image', 'url'); //--> give that to a site to host and then return the link; look up hosting images and getting back the url as a variable, pass the variable into storage
+
+
 
 // Set constraints for the video stream
 var constraints = { video: { facingMode: "user" }, audio: false };
@@ -29,6 +34,7 @@ cameraTrigger.onclick = function() {
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
     cameraOutput.src = cameraSensor.toDataURL("image/webp");
     cameraOutput.classList.add("taken");
+    //store this as a variable of some sort - we need to know what it needs to analyse
 };
 
 cameraAnalyse.onclick = function() {
