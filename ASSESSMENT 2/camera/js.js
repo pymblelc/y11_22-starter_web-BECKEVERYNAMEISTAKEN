@@ -45,5 +45,3 @@ cameraClear.onclick = function() {
     cameraSensor.width = "#fff"
     cameraSensor.height = "#fff";
 }
-let results =document.getElementById("myText");
-
