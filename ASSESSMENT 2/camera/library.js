@@ -18,25 +18,3 @@ myButton.addEventListener("click", function () {
   });
 });
     
-
-
- objects = [
-     {
-        "rectangle":{
-           x : "",
-           y : "",
-           sides : 4,
-        },
-        "triangle" : {
-          x : "",
-          y : "",
-          sides : 3,
-        },
-        "circle" : {
-          x : "",
-          y: "",
-          sides : 1,
-        }
-      }
-      ]
- 
