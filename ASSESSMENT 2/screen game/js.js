@@ -26,7 +26,7 @@ function checkImage(animalType){
     resultsText.innerHTML = results;
     if (shape == animalType)
     {
-        score++;
+        score ++;
         scoreDisplay.innerHTML = "Your Score is: " + score;
     }
     getNextImage();

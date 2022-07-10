@@ -1,21 +1,25 @@
-const ANIMAL_0 = "https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png";
+const ANIMAL_0 = "https://kb.rspca.org.au/wp-content/uploads/2018/11/tabby-cat-stairs.jpg";
 const ANIMAL_1 = "https://c.stocksy.com/a/Gpy200/z9/710474.jpg";
-const ANIMAL_2 = "https://www.animalspot.net/wp-content/uploads/2013/02/Rabbit-283x300.jpg";
-const ANIMAL_3 = "https://www.thoughtco.com/thmb/qVWPvSIm-DaHjLeCHpTpiSuQErA=/650x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/fish2GE-57ed128f5f9b586c35a3dcff.jpg";
-const ANIMAL_4 = "https://www.pinkvilla.com/imageresize/baby-elephant-playing-in-a-river.jpg?width=752&format=webp&t=pvorg";
-const ANIMAL_5 = "https://blog.humanesociety.org/wp-content/uploads/2022/04/HSI-Makalali-154_414838-1220x814.jpg";
-const ANIMAL_6 = "https://www.princeton.edu/sites/default/files/styles/half_2x/public/images/2022/02/KOA_Nassau_2697x1517.jpg?itok=iQEwihUn";
-const ANIMAL_7 = "https://https://hootdetective.net.au/the-owls";
-const ANIMAL_8 = "https://th-thumbnailer.cdn-si-edu.com/bZAar59Bdm95b057iESytYmmAjI=/1400x1050/filters:focal(594x274:595x275)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/95/db/95db799b-fddf-4fde-91f3-77024442b92d/egypt_kitty_social.jpg";
+const ANIMAL_2 = "https://live-production.wcms.abc-cdn.net.au/8f9e665abc0267d245013c1423377109?impolicy=wcms_crop_resize&cropH=1654&cropW=2931&xPos=0&yPos=591&width=862&height=485";
+const ANIMAL_3 = "https://th-thumbnailer.cdn-si-edu.com/RAt2_jGHzAII_bmh9aVykFZWnc4=/fit-in/1600x0/filters:focal(302x242:303x243)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer_public/86/55/8655aa08-f7b8-4f0a-a66c-7331c2634044/cirrhilabrus_finifenmaa_release_1.jpeg";
+const ANIMAL_4 = "https://images.newscientist.com/wp-content/uploads/2022/04/11165158/SEI_98357375.jpg?crop=4:3,smart&width=1200&height=900&upscale=true";
+const ANIMAL_5 = "https://cdn.britannica.com/96/1296-050-4A65097D/gelding-bay-coat.jpg";
+const ANIMAL_6 = "https://imageio.forbes.com/blogs-images/jvchamary/files/2016/01/zebra-1200x800.jpg?format=jpg&width=960";
+const ANIMAL_7 = "https://cdn.britannica.com/23/523-050-0C120420/cow-Holstein-Friesian.jpg";
+const ANIMAL_8 = "https://media.wired.com/photos/5bb532b7f8a2e62d0bd5c4e3/1:1/w_1800,h_1800,c_limit/bee-146810332.jpg";
 const ANIMAL_9 = "https://upload.wikimedia.org/wikipedia/commons/3/34/Labrador_on_Quantock_%282175262184%29.jpg";
 
 const CAT = 'Cat';
-const DOG = 'Dog';
 const ELEPHANT = 'Elephant';
-const RABBIT = "Rabbit";
-const OWL = 'Owl';
+const GIRAFFE = 'Giraffe';
 const FISH = 'Fish';
-const BIRD = 'Bird';
+const PRIMATE = 'Primate';
+const HORSE = 'Horse';
+const ZEBRA = 'Zebra';
+const COW = 'Cow';
+const INSECT = 'Insect';
+const DOG = 'Dog';
+
 
 var gamedata;
 
@@ -32,43 +36,43 @@ gamedata = [
     },
     {
         ImageLink : ANIMAL_2,
-        AnimalType: RABBIT,
-        Comment : "easter",
+        AnimalType: GIRAFFE,
+        Comment : "neck",
     },
     {
         ImageLink : ANIMAL_3,
-        AnimalType: CAT,
-        Comment : "cool",
+        AnimalType: FISH,
+        Comment : "wet",
     },
     {
         ImageLink : ANIMAL_4,
-        AnimalType: BIRD,
-        Comment : "spooky",
+        AnimalType: PRIMATE,
+        Comment : "bananas",
     },
     {
         ImageLink : ANIMAL_5,
-        AnimalType: BIRD,
-        Comment : "spooky",
+        AnimalType: HORSE,
+        Comment : "gallop",
     },
     {
         ImageLink : ANIMAL_6,
-        AnimalType: CAT,
-        Comment : "cool",
+        AnimalType: ZEBRA,
+        Comment : "stripes",
     },
     {
         ImageLink : ANIMAL_7,
-        AnimalType: BIRD,
-        Comment : "spooky",
+        AnimalType: COW,
+        Comment : "spots",
     },
     {
         ImageLink : ANIMAL_8,
-        AnimalType: BIRD,
-        Comment : "spooky",
+        AnimalType: INSECT,
+        Comment : "small",
     },
     {
         ImageLink : ANIMAL_9,
-        AnimalType: CAT,
-        Comment : "cool",
+        AnimalType: DOG,
+        Comment : "playful",
     }
 ];
 
