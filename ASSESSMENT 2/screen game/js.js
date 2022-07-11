@@ -19,6 +19,20 @@ function displayImage() {
   }
 }
 
+/* potential finishing button
+function displaybtn_finish(){
+  let finishBtn = document.getElementById("finish");
+  let finish_div = document.getElementById("hidden_btnfinish");
+s
+  if (div.style.display === "none") {
+    finish_div.style.display = "block";
+    imageURL.src = gamedata[ANIMAL_9].ImageLink;
+  } else {
+    finish_div.style.display = "none";
+  }
+}
+*/
+
 //calls API & returns data: correct
 function getAIAnimal() {
   if (document.getElementById("hideImage").style.display != "block") return;
