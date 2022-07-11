@@ -1,10 +1,10 @@
 let imageCounter = 0; //start of image array
-let imageURL = document.getElementById("animalPhoto");
+let imageURL = document.getElementById("flagPhoto");
 let score = 0;
 let results = document.getElementById("resultsText");
 let scoreDisplay = document.getElementById("scoreText");
 let imageAPIresults;
-let specAnimal;
+let specFlag;
 
 //correct
 function displayImage() {
@@ -13,7 +13,7 @@ function displayImage() {
 
   if (div.style.display === "none") {
     div.style.display = "block";
-    imageURL.src = gamedata[imageCounter].ImageLink;
+    imageURL.src = flagdata[imageCounter].ImageLink;
   } else {
     div.style.display = "none";
   }
@@ -26,7 +26,7 @@ function displaybtn_finish(){
 s
   if (div.style.display === "none") {
     finish_div.style.display = "block";
-    imageURL.src = gamedata[ANIMAL_9].ImageLink;
+    imageURL.src = flagdata[FLAG_9].ImageLink;
   } else {
     finish_div.style.display = "none";
   }
@@ -34,9 +34,9 @@ s
 */
 
 //calls API & returns data: correct
-function getAIAnimal() {
+function getAIflag() {
   if (document.getElementById("hideImage").style.display != "block") return;
-  ImageAPI.analyseImage(gamedata[imageCounter].ImageLink, function (data) {
+  ImageAPI.analyseImage(flagdata[imageCounter].ImageLink, function (data) {
     let aiReturn = data.description.tags[0];
     
     imageAPIresults = aiReturn;
@@ -50,41 +50,41 @@ function getAIAnimal() {
 function displayResults() {
   let results = "<p>Object " + ": " + imageAPIresults + "</p>";
   resultsText.innerHTML = results;
-  if (imageAPIresults == specAnimal.toLowerCase() ) {
+  if (imageAPIresults == specFlag.toLowerCase() ) {
     score++;
   }
   scoreDisplay.innerHTML = "Your Score is: " + score;
- //randomNumber(animalType);
+ //randomNumber(flagType);
   getNextImage();
 }
 
 //correct
 function findId(identity) { myRandom(4);
-  specAnimal = document.getElementById(identity).innerHTML;
-  getAIAnimal();
+  specFlag = document.getElementById(identity).innerHTML;
+  getAIflag();
 }
 
-//make a list of all the animals
+//make a list of all the flags
 //change btn names to btn_1, btn_2, btn_3, btn_4
-// run the animals through 3 of the buttons (random is used)
+// run the flags through 3 of the buttons (random is used)
 //make sure the list doesnt include the correct answer
 // one button is always the correct answer
 
 //example of multiway selection: unknown
-function randomNumber(animal) {
+function randomNumber(flag) {
   var random = myRandom(4);// Math.floor(Math.random() * 4);
   switch (random) {
-  case 1:
-    document.getElementById("01").innerHTML = animal;
-    break;
-  case 2:
-    document.getElementById("02").innerHTML = animal;
-    break;
-  case 3:
-    document.getElementById("03").innerHTML = animal;
-    break;
+    case 1:
+      document.getElementById("01").innerHTML = flag;
+      break;
+    case 2:
+      document.getElementById("02").innerHTML = flag;
+      break;
+    case 3:
+      document.getElementById("03").innerHTML = flag;
+      break;
     default:
-      document.getElementById(results).innerHTML = animal;
+      document.getElementById(results).innerHTML = flag;
       break;
   }
 }
@@ -102,5 +102,5 @@ if (i == r) break;
 // this sends my counter back to the beginning :correct
 function getNextImage() {
   if (imageCounter++ >=10) imageCounter = 0; 
-  imageURL.src = gamedata[imageCounter].ImageLink;
+  imageURL.src = flagdata[imageCounter].ImageLink;
 }
