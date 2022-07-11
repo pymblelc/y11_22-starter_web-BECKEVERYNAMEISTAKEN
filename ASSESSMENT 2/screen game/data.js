@@ -75,5 +75,3 @@ gamedata = [
         Comment : "playful",
     }
 ];
-
-console.log(gamedata[0]);

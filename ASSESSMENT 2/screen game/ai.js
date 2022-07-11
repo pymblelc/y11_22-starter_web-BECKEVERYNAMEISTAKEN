@@ -20,7 +20,7 @@ const ImageAPI = {
         return data;
     }, 
 
-    /**333333333333#]]
+    /**
      * 
      * @param {string} imageUrl - The url to an image online
      * @param {CallableFunction} callback - The function that will run when receiving the data

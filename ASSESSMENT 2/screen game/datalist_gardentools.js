@@ -1,76 +1,76 @@
-const TOOL_0 = "https://cdn.shopify.com/s/files/1/0568/7577/8202/products/Council-Tool-Woodcraft-Pack-Axe_1024x.jpg?v=1628500663";
-const TOOL_1 = "https://m.media-amazon.com/images/I/41f8b0te6DL._AC_SY580_.jpg";
-const TOOL_2 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRksIEDeiGgdHwIdAtxdp0ldb17q2ERHl1UT-pp4NPHTXr0KxbPrhDR97UKyHrj-i-P74I&usqp=CAU";
-const TOOL_3 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmPiJy6eCYYkn9tMRe6TZMOfss1tgY59wJO1DB3pGpzG1EJwAsJ_FcixdS7fCl9olW3gI&usqp=CAU";
-const TOOL_4 = "https://cdn.shopify.com/s/files/1/0094/2823/8432/products/4808-Web_375x@2x.png?v=1605822814";
-const TOOL_5 = "https://cdn.shopify.com/s/files/1/0094/2823/8432/products/6632.jpg?v=1571288479";
-const TOOL_6 = "https://assets.babybunting.com.au/prd/26530_1.jpg?tr=w-480,h-480,cm-pad_resize";
-const TOOL_7 = "https://pyxis.nymag.com/v1/imgs/e4c/51b/b1ab1f264e215bb2fedc38c045f1a82eb3.jpg";
-const TOOL_8 = "https://www.bcsands.com.au/images/large/products/24902_LRG.jpg";
-const TOOL_9 = "https://static.wikia.nocookie.net/plantsvszombies/images/9/9e/FlowerPot_irl.jpg/revision/latest?cb=20190818010530";
+const CHALLENGE_0 = "https://cdn.shopify.com/s/files/1/0568/7577/8202/products/Council-Tool-Woodcraft-Pack-Axe_1024x.jpg?v=1628500663";
+const CHALLENGE_1 = "https://www.ikea.com/au/en/images/products/smycka-artificial-flower-carnation-dark-lilac__0636966_pe698127_s5.jpg?f=s";
+const CHALLENGE_2 = "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/Design/i4-designelemente/i4de-00-teaser-high.jpg?imwidth=360";
+const CHALLENGE_3 = "https://cdn.shopify.com/s/files/1/0344/6217/1274/products/d87efaa6ecefa0581da1bf7e86eef22f_600x.png?v=1615571906";
+const CHALLENGE_4 = "https://www.ikea.com/au/en/images/products/svansele-mirror-gold-colour__0898210_pe813213_s5.jpg";
+const CHALLENGE_5 = "https://media.prod.bunnings.com.au/api/public/content/29638f508336482791c1a17609d9fb58?v=63d0843c&t=w500dpr1";
+const CHALLENGE_6 = "https://www.ikea.com/au/en/images/products/formskoen-water-bottle-clear-glass-yellow__0985589_pe816689_s5.jpg";
+const CHALLENGE_7 = "https://www.ikea.com/au/en/images/products/arstid-table-lamp-nickel-plated-white__0609332_pe684455_s5.jpg";
+const CHALLENGE_8 = "https://www.jameslane.com.au/Images/ProductImages/Medium/131HOBQUEBEDBRU.png";
+const CHALLENGE_9 = "https://cdn.shopify.com/s/files/1/0614/8217/2602/products/191-19_TrekkingUmbrella_Black_2_ForWeb_b8ee0655-aead-4add-9210-b86afff2ca3d.jpg?v=1648710523&width=1500";
 
 const AXE = 'ax';
-const SAW = 'saw';
-const RAKE = 'rake';
-const SHOVEL = 'shovel';
-const WATERINGCAN = 'watering can';
-const GARDENINGFORK = 'gardening fork';
-const SPADE = 'spade';
-const SHEARS = 'gardening shears';
-const WHEELBARROW = 'wheelbarrow';
-const FLOWERPOT = 'flower pot';
+const FLOWER = 'flower';
+const CAR = 'car';
+const GUITAR = 'guitar';
+const MIRROR = 'mirror';
+const FAN = 'fan';
+const BOTTLE = 'bottle';
+const LAMP = 'lamp';
+const BED = 'bed';
+const UMBRELLA = 'umbrella';
 
-var tooldata;
+var challenge;
 
-tooldata = [
+challenge = [
     {
-        ImageLink : TOOL_0,
-        toolType: AXE,
+        ImageLink : CHALLENGE_0,
+        challengeType: AXE,
         Comment: 'ax: American spelling',
     },
     {
-        ImageLink : TOOL_1,
-        toolType: SAW,
-        Comment: 'saw',
+        ImageLink : CHALLENGE_1,
+        challengeType: FLOWER,
+        Comment: 'flower',
     },
     {
-        ImageLink : TOOL_2,
-        toolType: RAKE,
-        Comment: 'rake',
+        ImageLink : CHALLENGE_2,
+        challengeType: CAR,
+        Comment: 'car',
     },
     {
-        ImageLink : TOOL_3,
-        toolType: SHOVEL,
-        Comment: 'shovel',
+        ImageLink : CHALLENGE_3,
+        challengeType: GUITAR,
+        Comment: 'guitar',
     },
     {
-        ImageLink : TOOL_4,
-        toolType: WATERINGCAN,
-        Comment: 'watering can',
+        ImageLink : CHALLENGE_4,
+        challengeType: MIRROR,
+        Comment: 'mirror',
     },
     {
-        ImageLink : TOOL_5,
-        toolType: GARDENINGFORK,
-        Comment: 'gardening fork',
+        ImageLink : CHALLENGE_5,
+        challengeType: FAN,
+        Comment: 'fan',
     },
     {
-        ImageLink : TOOL_6,
-        toolType: SPADE,
-        Comment: 'spade',
+        ImageLink : CHALLENGE_6,
+        challengeType: BOTTLE,
+        Comment: 'bottle',
     },
     {
-        ImageLink : TOOL_7,
-        toolType: SHEARS,
-        Comment: 'gardening shears',
+        ImageLink : CHALLENGE_7,
+        challengeType: LAMP,
+        Comment: 'lamp',
     },
     {
-        ImageLink : TOOL_8,
-        toolType: WHEELBARROW,
-        Comment: 'wheelbarrow',
+        ImageLink : CHALLENGE_8,
+        challengeType: BED,
+        Comment: 'bed',
     },
     {
-        ImageLink : TOOL_9,
-        toolType: FLOWERPOT,
-        Comment: 'flower pot',
+        ImageLink : CHALLENGE_9,
+        challengeType: UMBRELLA,
+        Comment: 'umbrella',
     },
 ];

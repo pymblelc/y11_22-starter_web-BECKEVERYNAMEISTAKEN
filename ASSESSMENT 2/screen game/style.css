@@ -78,7 +78,7 @@
     color: rgb(229, 199, 199); 
     font-family: 'Fredoka One', cursive;
 }
-.celebrities{
+.challenge{
     width:200px;
     height:30px;
     background-color:rgb(84, 12, 12);
@@ -91,33 +91,7 @@
     color:  rgb(229, 199, 199);
     font-family: 'Fredoka One', cursive;
 }
-.celebrities:hover{
-    width: 200px;
-    height:30px;
-    background-color:rgb(44, 145, 61);
-    border-radius: 30px;
-    border: none;
-    font-size:16px;
-    padding: 6px 20px;
-    text-align: center;
-    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
-    color:  rgb(229, 199, 199);
-    font-family: 'Fredoka One', cursive;  
-}
-.flags{
-    width:200px;
-    height:30px;
-    background-color:rgb(84, 12, 12);
-    border-radius: 30px;
-    border: none;
-    font-size:16px;
-    padding: 6px 20px;
-    text-align: center;
-    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
-    color:  rgb(229, 199, 199);
-    font-family: 'Fredoka One', cursive;
-}
-.flags:hover{
+.challenge:hover{
     width: 200px;
     height:30px;
     background-color:rgb(44, 145, 61);
@@ -161,10 +135,6 @@ button:hover{
     box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
     color: rgb(229, 199, 199); 
     font-family: 'Fredoka One', cursive;
-}
-.photoDiv{
-    padding: 10px 10px;
-    border: #000000;
 }
 .homebtn{
     color: #fff;
