@@ -103,19 +103,20 @@ function myRandom(n) {
   // final random number from the clock
   //Returns no domain 0..n
   let r = Date.now() % n;
-  for (i = 0; i <= r; i++) {
-    if (i == r) { 
-      r = Date.now() % n;
-      break;
-    }
-  }
-  // r=  Math.floor(Math.random()*n
+  //for (i = 0; i <= r; i++) {
+  //  if (i == r) { 
+  //    r = Date.now() % n;
+  //    break;
+  //  }
+  // }
+  r =  Math.floor(Math.random()* n );
   return r;
 }
 
 // this sends my counter back to the beginning :correct
 function getNextImage() {
-  if (imageCounter++ >= 10) 
+  if (imageCounter++ >= 10) alert("Finsihed");
+  
   imageURL.src = gamedata[imageCounter].ImageLink;
   // setTimeout( imageHide, 1000);
   RandomizeButtonId();
@@ -129,7 +130,7 @@ function RandomizeButtonId()
   myset.add (imageCounter);
   while( myset.size <4)
   {
-    rnd = myRandom(9);
+    rnd = myRandom(10);
     if ( !myset.has (rnd) )
      myset.add( rnd);
   }
@@ -144,23 +145,25 @@ function RandomizeButtonId()
         }
     } 
     //setButtontext
+    let j=1
     for (const element of finalset) {
-      buttonID = '0' + element;
+      buttonID = '0' + j++;
       button = document.getElementById(buttonID);
+      button.innerHTML = gamedata[element].AnimalType;
       console.log(button.innerHTML);
     }
-      
+    console.log("++++++++++++++");
     };
 
 
 
-
+/*
  
 //shuffle
 var tag = Array("01", "02", "03", "04");
 var tagshuffle = tag[myRandom(4)];
   //document.getElementById().innerHTML = tagshuffle;
-  console.log("tagshuffle")
+  // console.log('tagshuffle +'************');
 
 
 //shuffle for tag 1
@@ -180,4 +183,4 @@ var items = Array('cat', 'elephant', 'giraffe', 'fish', 'primate', 'horse', 'zeb
 var item = items[Math.floor(Math.random()*items.length)];
 document.getElementById("03").innerHTML = item;
 console.log(item);
-
+*/
