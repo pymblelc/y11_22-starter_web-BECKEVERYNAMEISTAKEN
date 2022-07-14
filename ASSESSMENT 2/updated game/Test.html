@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="testRnd()">Rnd</button><BR>
+  <p></p>
+<button onclick="test()">Rnd Set</button>
+<p></p>
+<button onclick="testArray()">Rnd Array</button>
+<p id="demo"></p>
+</body>
+
+<script language='javascript'>
+
+var busy=false; // used to block mutlple calls to test fns.
+// HTML paragraph reference for text output
+var TextOut=document.getElementById('demo');
+
+// Becky's random returns a random integer no, domain 0..n
+function bRandom(n) {
+  return rndMember = Math.floor( Math.random()*n );
+}
+
+// Write text to html paragraph
+function write( data ){
+    TextOut.innerHTML += data;
+}
+
+// Write text with new line to html paragraph
+function writeln( data ){
+    TextOut.innerHTML += data + "<BR>";
+}
+
+// Format & write out a sets data
+function writelnSet( data ){
+  let setText = "";
+  for(const each of data.values()) setText+=each + ",";
+  if (setText.lastIndexOf(",")>=0)
+      setText=setText.substr(0,setText.lastIndexOf(","));
+  writeln( setText );
+}
+
+// Clear the output paragraph
+function clear(){
+    TextOut.innerHTML = "";
+}
+
+function testRnd(){
+  if (!busy)
+  {
+    busy=true
+    clear();
+    writeln("start");
+    for (i=0; i<10; i++)
+         writeln( "Rnd:" + i + ":" + bRandom(10));
+
+    write("end");
+    busy=false;
+  }
+}
+
+function test()
+{
+  if (!busy)
+  {
+      busy=true
+      //clear();
+
+      var Answer = 4;
+      var mySet = new Set();
+      mySet.add (Answer);
+
+      while( mySet.size <4)
+      {
+        rnd = bRandom(9);
+        if ( !mySet.has (rnd) ) mySet.add( rnd);
+      }
+      write("s:"); writelnSet( mySet );
+
+      // Shuffle data so answer is not always at first element
+      finalset = new Set();
+      while( finalset.size < 4)
+        {
+            rndMember = bRandom(9);
+            if (mySet.has(rndMember)) {
+                mySet.delete(rndMember);
+                finalset.add( rndMember );
+            }
+        }
+
+      write("f:"); writelnSet( finalset );
+      writeln("-----");
+      busy=false;
+  }
+
+}
+
+function testArray(){
+  if (!busy)
+  {
+      busy=true
+      //clear();
+
+      let Answer = 4; // imageCounter
+      let AnimalCaptions = new Array;
+      // Add solution
+      AnimalCaptions.push(Answer);
+      // Get 3 other Different random numbers (animals)
+      while( true ){
+        let rnd = bRandom(9);
+        if (AnimalCaptions.indexOf(rnd) <0)
+          AnimalCaptions.push(rnd);
+
+        if (AnimalCaptions.length == 4) break;
+      }
+      write("s:"); writeln( AnimalCaptions );
+      // Shuffle data so answer is not always at first element
+      AnimalCaptions = AnimalCaptions.sort();
+      write("s:"); writeln( AnimalCaptions );
+      writeln("-----");
+      busy=false;
+  }
+}
+</script>
+</html>

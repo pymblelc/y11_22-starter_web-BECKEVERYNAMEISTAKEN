@@ -1,0 +1,202 @@
+.box_1 {
+    width: 250px;
+    height: 400px;
+    background-color: rgb(145, 68, 68);
+    color: rgb(230, 207, 207);
+    font-size: 14px;
+    border-radius: 30px;
+    border: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Fredoka One', cursive; 
+}
+.box_2 {
+    width: 250px;
+    height: 400px;
+    background-color: rgb(145, 68, 68);
+    color: rgb(230, 207, 207);
+    font-size: 16px;
+    border-radius: 30px;
+    border: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Fredoka One', cursive; 
+}
+.box_3 {
+    width: 250px;
+    height: 450px;
+    background-color: rgb(145, 68, 68);
+    color: rgb(230, 207, 207);
+    font-size: 16px;
+    border-radius: 30px;
+    border: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Fredoka One', cursive; 
+}
+.box_4 {
+    width: 250px;
+    height: 450px;
+    background-color: rgb(145, 68, 68);
+    color: rgb(230, 207, 207);
+    font-size: 16px;
+    border-radius: 30px;
+    border: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Fredoka One', cursive; 
+}
+.easy{
+    width:200px;
+    height:30px;
+    background-color:rgb(84, 12, 12);
+    border-radius: 30px;
+    border: none;
+    font-size:16px;
+    padding: 6px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
+    color:  rgb(229, 199, 199);
+    font-family: 'Fredoka One', cursive;
+}
+.easy:hover{
+    width: 200px;
+    height:30px;
+    background-color:rgb(44, 145, 61);
+    border-radius: 30px;
+    border: none;
+    font-size:16px;
+    padding: 6px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
+    color: rgb(229, 199, 199); 
+    font-family: 'Fredoka One', cursive;
+}
+.medium{
+    width:200px;
+    height:30px;
+    background-color:rgb(84, 12, 12);
+    border-radius: 30px;
+    border: none;
+    font-size:16px;
+    padding: 6px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
+    color:  rgb(229, 199, 199);
+    font-family: 'Fredoka One', cursive;
+}
+.medium:hover{
+    width: 200px;
+    height:30px;
+    background-color:rgb(44, 145, 61);
+    border-radius: 30px;
+    border: none;
+    font-size:16px;
+    font-family: 'Amatic SC', cursive;
+    padding: 6px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
+    color:  rgb(229, 199, 199);
+    font-family: 'Fredoka One', cursive;
+}
+.challenge{
+    width:200px;
+    height:30px;
+    background-color:rgb(84, 12, 12);
+    border-radius: 30px;
+    border: none;
+    font-size:16px;
+    padding: 6px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
+    color:  rgb(229, 199, 199);
+    font-family: 'Fredoka One', cursive;
+}
+.challenge:hover{
+    width: 200px;
+    height:30px;
+    background-color:rgb(44, 145, 61);
+    border-radius: 30px;
+    border: none;
+    font-size:16px;
+    font-family: 'Amatic SC', cursive;
+    padding: 6px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
+    color:  rgb(229, 199, 199);
+    font-family: 'Fredoka One', cursive;
+}
+.Instructions{
+    text-decoration: underline;
+    font-family: 'Amatic SC', cursive;
+    font-size: 24px
+}
+button{
+    width:100px;
+    height:30px;
+    background-color:rgb(84, 12, 12);
+    border-radius: 5px;
+    border: none;
+    font-size:14px;
+    padding: 6px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
+    color: rgb(229, 199, 199);
+    font-family: 'Fredoka One', cursive;
+}
+button:hover{
+    width:100px;
+    height:30px;
+    background-color:rgb(44, 145, 61);
+    border-radius: 5px;
+    border: none;
+    font-size:14px;
+    padding: 6px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rbga(0, 0, 0, 0.2);
+    color: rgb(229, 199, 199); 
+    font-family: 'Fredoka One', cursive;
+}
+.homebtn{
+    color: #fff;
+    border:rgb(84, 12, 12);
+    padding: 10px 10px;
+    background-color: rgb(84, 12, 12);
+    border-radius: 5px;
+    position: absolute;
+    text-decoration: none;
+    font-family: 'Fredoka One', cursive;
+}
+.homebtn:hover {
+    color: #fff;
+    padding: 10px 10px;
+    background-color: rgb(44, 145, 61);
+    border-radius: 5px;
+    position: absolute;
+    text-decoration: none;
+    font-family: 'Fredoka One', cursive;
+}

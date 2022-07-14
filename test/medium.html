@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Starter Website</title>
+    <!--FONT LINKS, ETC...-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>idk yet</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--javascript-->
+    <script src = "javascript_medium.js" defer></script>
+     <!--library-->
+    <script src="ai.js" defer></script>
+     <!--data-->
+     <script src="datalist_medium.js" defer></script>
+     <!--font choice:-->
+     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <a class="homebtn" href="index.html">HOME</a>
+    <section class="box_4">
+      <p>PRESS THIS BUTTON TO START</p>
+      <button id="start_btn" onclick="displayImage()">START</button> <br />
+      <br>
+      <div id="hideImage" hidden style="display: none">
+        <div class="photoDiv">
+          <img id="mediumPhoto" width="150" src="" alt="a photo" />
+        </div>
+      </div>
+      <br />
+      <button id="01" onclick="findId(this.id)">GUITAR</button>
+      <button id="02" onclick="findId(this.id)">KEYBOARD</button>
+      <br />
+      <br />
+      <button id="03" onclick="findId(this.id)">TRIANGLE</button>
+      <button id="04" onclick="findId(this.id)">SIREN</button>
+      <br />
+      <br />
+      <div id="resultsText">Your score is:</div>
+      <div id="scoreText">0</div>
+      <div id = "hidden_btnfinish">
+        <button id=" finish " hidden style = "display: none"> You've finished the music section. Return to home! </button>
+      </div>
+    </section>
+        </body>
+        </html>
