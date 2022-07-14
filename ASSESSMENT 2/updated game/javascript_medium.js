@@ -51,10 +51,17 @@ function getAIObject() {
       medium[imageCounter].ImageLink,
       function (data){
         // This only uses the first tag to get the picture description
-        let aiReturn = data.description.tags[0];
-        imageAPIresults = aiReturn;
-        // The answer is then displayed when data arrives
-        displayAPIResults();
+        let aiReturn ="";
+        try{
+          let aiReturn = data.description.tags[0];
+          imageAPIresults = aiReturn;
+          // The answer is then displayed when data arrives
+          displayAPIResults();
+        }
+        catch{
+          results.innerHTML = "A server error has occured, please try again later.";
+          // StartImage();
+        }
         return aiReturn;
       }
     );
@@ -138,7 +145,7 @@ function bRandom(n) {
 }
 
 // The correct answer is assigned to a random button of the four. 
-// The image data[imagecounter].objectType contains the answer
+// The image data[imagecounter].MusicType contains the answer
 // The user answer is displayed from the button text.
 
 // The button text is decided through having one correct answer being placed in a solution set, 
@@ -147,7 +154,7 @@ function bRandom(n) {
 // The answer is always placed first, therefore the set is then shuffled for each question, the button choice changes
 
 function RandomizeButtons()
-// The current object is found through the gamedata[imageCounter].objectType
+// The current object is found through the gamedata[imageCounter].MusicType
 // The image = medium[imageCounter].ImageLink
 // The data indexes are randomized here for the rest of the buttons, so the answer is always in a different location
 {
@@ -178,7 +185,7 @@ function RandomizeButtons()
        default:
        }
        let index = ObjectIndexes[i];
-       btn.innerHTML = medium[index].ObjectType;
+       btn.innerHTML = medium[index].MusicType;
     }
 
 }

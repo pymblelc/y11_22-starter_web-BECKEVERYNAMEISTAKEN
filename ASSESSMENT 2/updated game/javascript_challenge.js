@@ -51,10 +51,17 @@ function getAIChallenge() {
       challenge[imageCounter].ImageLink,
       function (data){
         // This only uses the first tag to get the picture description
-        let aiReturn = data.description.tags[0];
-        imageAPIresults = aiReturn;
-        // The answer is then displayed when data arrives
-        displayAPIResults();
+        let aiReturn ="";
+        try{
+          let aiReturn = data.description.tags[0];
+          imageAPIresults = aiReturn;
+          // The answer is then displayed when data arrives
+          displayAPIResults();
+        }
+        catch{
+          results.innerHTML = "A server error has occured, please try again later.";
+          // StartImage();
+        }
         return aiReturn;
       }
     );
@@ -178,7 +185,7 @@ function RandomizeButtons()
        default:
        }
        let index = ChallengeIndexes[i];
-       btn.innerHTML = challenge[index].ChallengeType;
+       btn.innerHTML = challenge[index].challengeType;
     }
 
 }
