@@ -200,3 +200,19 @@ button:hover{
     text-decoration: none;
     font-family: 'Fredoka One', cursive;
 }
+.placeholder {
+    height: 100px;
+}
+
+.hideImage {
+    display: none;
+}
+.mediumPhoto{
+    width: 150px;
+}
+.animalPhoto{
+    width: 150px;
+}
+.challengePhoto{
+    width: 150px;
+}

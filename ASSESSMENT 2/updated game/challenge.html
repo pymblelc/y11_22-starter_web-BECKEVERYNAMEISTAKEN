@@ -25,31 +25,24 @@
 <section class="box_3">
     <p>PRESS THIS BUTTON TO START</p>
     <button id="start_btn" onclick="displayImage()">START</button> <br />
-    <div id="hideImage" hidden style="display: none">
-      <div class="photoDiv">
-        <img id="challengePhoto" width="150" src="" alt="a photo" />
+    <div id="placeholder" class="placeholder">
+      <div id="hideImage" class="hideImage" hidden>
+        <div class="photoDiv">
+          <img id="challengePhoto" class= "challengePhoto" src="" alt="a photo" />
+        </div>
       </div>
     </div>
     <br />
-    <button id="01" onclick="findId(this.id)">AX</button>
-    <button id="02" onclick="findId(this.id)">SHEARS</button>
+    <button id="01" onclick="CheckAnimal('01')">1</button>
+    <button id="02" onclick="CheckAnimal('02')">2</button>
     <br />
     <br />
-    <button id="03" onclick="findId(this.id)">HOE</button>
-    <button id="04" onclick="findId(this.id)">SPADE</button>
+    <button id="03" onclick="CheckAnimal('03')">3</button>
+    <button id="04" onclick="CheckAnimal('04')">4</button>
     <br />
     <br />
     <div id="resultsText">Your score is:</div>
     <div id="scoreText">0</div>
-    <div id = "hidden_btnfinish">
-      <button id=" finish " hidden style = "display: none"> You've finished the challenge section. Return to home! </button>
-    </div>
-
-
-
-
-
-
 </section>
         </body>
         </html>
