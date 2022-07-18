@@ -1,4 +1,4 @@
-// Roughly copy & pasted from the easier level, names have been changed, etc..
+ // Roughly copy & pasted from the easier level, names have been changed, etc..
 
 
 // This initialises the commonly used control data objects
@@ -42,7 +42,7 @@ function CheckObject(identity) {
 }
 
 // This function calls the API & returns the image analysis data:
-// It is very slow as there is a time delay -- uncontrollable 
+// It is very slow  as there is a time delay -- uncontrollable 
 
 // Example of function
 function getAIObject() {

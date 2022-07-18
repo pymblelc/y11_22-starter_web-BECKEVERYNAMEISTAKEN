@@ -10,14 +10,14 @@ const MUSIC_8 = "https://cdn.britannica.com/34/150934-050-AB388AF8/Piano-accordi
 const MUSIC_9 = "https://images.twinkl.co.uk/tw1n/image/private/t_630/image_repo/21/18/triangle_ver_3.jpg";
 
 const GUITAR = 'Guitar';
-const XYLOPHONE = 'Xylophone';
-const KEYBOARD = 'Keyboard';
+const DRUM = 'Drum' 
+const BRASS = 'Brass';
 const GLASS = 'Glass';
 const KAZOO = 'Kazoo';
 const MARACAS = 'Maracas';
-const RECORDER = 'Recorder';
-const SAXOPHONE = 'Saxophone';
-const SIREN = 'Siren';
+const BANJO = 'Banjo';
+const BOWEDINSTRUMENT = 'Bowed Instrument';
+const ACCORDIAN = 'Accordian';
 const TRIANGLE = 'Triangle';
 
 var medium;
@@ -26,47 +26,47 @@ medium = [
     {
         ImageLink : MUSIC_0,
         MusicType: GUITAR,
-        Comment : "cute",
+        Comment : "best",
     },
     {
         ImageLink : MUSIC_1,
-        MusicType: XYLOPHONE,
-        Comment : "big",
+        MusicType: DRUM,
+        Comment : "tambourine",
     },
     {
         ImageLink : MUSIC_2,
-        MusicType: KEYBOARD,
-        Comment : "neck",
+        MusicType: BRASS,
+        Comment : "jazz",
     },
     {
         ImageLink : MUSIC_3,
         MusicType: GLASS,
-        Comment : "wet",
+        Comment : "water",
     },
     {
         ImageLink : MUSIC_4,
         MusicType: KAZOO,
-        Comment : "bananas",
+        Comment : "annoying",
     },
     {
         ImageLink : MUSIC_5,
         MusicType: MARACAS,
-        Comment : "gallop",
+        Comment : "shake",
     },
     {
         ImageLink : MUSIC_6,
-        MusicType: RECORDER,
-        Comment : "stripes",
+        MusicType: BANJO,
+        Comment : "cool",
     },
     {
         ImageLink : MUSIC_7,
-        MusicType: SAXOPHONE,
-        Comment : "spots",
+        MusicType: BOWEDINSTRUMENT,
+        Comment : "violin",
     },
     {
         ImageLink : MUSIC_8,
-        MusicType: SIREN,
-        Comment : "small",
+        MusicType: ACCORDIAN,
+        Comment : "busking",
     },
     {
         ImageLink : MUSIC_9,

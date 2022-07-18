@@ -20,11 +20,12 @@
      <!--font choice:-->
      <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body onload ="RandomizeButtons()">
         <a class="homebtn" href="index.html">HOME</a>    
 <section class="box_3">
     <p>PRESS THIS BUTTON TO START</p>
-    <button id="start_btn" onclick="StartImage()">START</button> <br />
+    <button id="start_btn" onclick="StartImage()">START</button> <br/>
+    <br>
     <div id="placeholder" class="placeholder">
       <div id="hideImage" class="hideImage" hidden>
         <div class="photoDiv">
@@ -33,12 +34,12 @@
       </div>
     </div>
     <br />
-    <button id="01" onclick="CheckAnimal('01')">1</button>
-    <button id="02" onclick="CheckAnimal('02')">2</button>
+    <button id="01" onclick="CheckChallenge('01')">1</button>
+    <button id="02" onclick="CheckChallenge('02')">2</button>
     <br />
     <br />
-    <button id="03" onclick="CheckAnimal('03')">3</button>
-    <button id="04" onclick="CheckAnimal('04')">4</button>
+    <button id="03" onclick="CheckChallenge('03')">3</button>
+    <button id="04" onclick="CheckChallenge('04')">4</button>
     <br />
     <br />
     <div id="resultsText">Your score is:</div>
