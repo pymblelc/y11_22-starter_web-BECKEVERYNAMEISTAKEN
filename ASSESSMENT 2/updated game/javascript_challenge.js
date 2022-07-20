@@ -7,6 +7,7 @@ let imageDIV = document.getElementById("hideImage");
 let results = document.getElementById("resultsText");
 let scoreDisplay = document.getElementById("scoreText");
 let startButton = document.getElementById("start_btn");
+
 // Game choice buttons
 let btn_1 = document.getElementById("01");
 let btn_2 = document.getElementById("02");
@@ -24,8 +25,10 @@ let imageCounter = 0;  //Current image index being used from data array
 // This function checks the users selection of challenge (through the buttons) with the AI
 // It is then called from user answer buttons (onclick)
 // The buttonID is passed through as text
-
 // Example of multiway selection
+
+// -------- FUNCTION CHECK CHALLENGE ---------
+
 function CheckChallenge(identity) {
 
   switch(identity){
@@ -43,8 +46,10 @@ function CheckChallenge(identity) {
 
 // This function calls the API & returns the image analysis data:
 // It is very slow as there is a time delay -- uncontrollable 
-
 // Example of function
+
+// -------- FUNCTION GET AI CHALLENGE ---------
+
 function getAIChallenge() {
     // This processes the image
     ImageAPI.analyseImage(
@@ -68,6 +73,9 @@ function getAIChallenge() {
 }
 
 // Setups the page for the start of the challenge
+
+// -------- FUNCTION START IMAGE ---------
+
 function StartImage() {
     // Hides any of the current images
     // Resets the app counters
@@ -87,6 +95,9 @@ function StartImage() {
 
 // The next image is loaded up based off of the imageCounter
 // Sets a timeout on any image displayed
+
+// -------- FUNCTION GET NEXT IMAGE ---------
+
 function getNextImage() {
   // Check the end of the game (final question)
   if (imageCounter++ >= challenge.length-1)
@@ -106,6 +117,9 @@ function getNextImage() {
 
 // Displays imageDIV if the visibility==true, otherwise the imageDIV is hidden
 // This can either be called directly or as a callback from timer expiration
+
+// -------- FUNCTION SET IMAGE VISIBILITY ---------
+
 function SetImageVisibility( visibility ){
   switch (visibility) {
     case true:
@@ -118,6 +132,9 @@ function SetImageVisibility( visibility ){
 
 // This gets the imageDIV's visibility
 // Then it returns true if visible, otherwise it returns as false
+
+// -------- FUNCTION GET IMAGE VISIBILITY ---------
+
 function getImageVisible(){
   let visible = false;
   if (imageDIV.style.display == "block"){
@@ -127,6 +144,9 @@ function getImageVisible(){
 }
 
 //The results are displayed from the AI engine callback
+
+// -------- FUNCTION DISPLAY API RESULTS ---------
+
 function displayAPIResults() {
   // This displays AI image analysis results
   let results = "<p>Object " + ": " + imageAPIresults + "</p>";
@@ -140,12 +160,15 @@ function displayAPIResults() {
 
 // I created a random return that returns a random integer
 // It will hopefully save some effort -- 
+
+// -------- FUNCTION BRANDOM ---------
+
 function bRandom(n) {
   return rndMember = Math.floor( Math.random()*n );
 }
 
 // The correct answer is assigned to a random button of the four. 
-// The image data[imagecounter].challengeType contains the answer
+// The image challenge[imagecounter].challengeType contains the answer
 // The user answer is displayed from the button text.
 
 // The button text is decided through having one correct answer being placed in a solution set, 
@@ -153,8 +176,10 @@ function bRandom(n) {
 // They are selected as a random set of 3 from 9 remaining answers.
 // The answer is always placed first, therefore the set is then shuffled for each question, the button choice changes
 
+// -------- FUNCTION RANDOMISE BUTTONS ---------
+
 function RandomizeButtons()
-// The current challenge is found through the gamedata[imageCounter].challengeType
+// The current challenge is found through the challenge[imageCounter].challengeType
 // The image = medium[imageCounter].ImageLink
 // The data indexes are randomized here for the rest of the buttons, so the answer is always in a different location
 {

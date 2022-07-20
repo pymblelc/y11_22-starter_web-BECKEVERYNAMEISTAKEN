@@ -4,6 +4,7 @@ let imageDIV = document.getElementById("hideImage");
 let results = document.getElementById("resultsText");
 let scoreDisplay = document.getElementById("scoreText");
 let startButton = document.getElementById("start_btn");
+
 // Game choice buttons
 let btn_1 = document.getElementById("01");
 let btn_2 = document.getElementById("02");
@@ -18,11 +19,14 @@ let imageAPIresults; // Response from AI Analysis
 let specifiedAnimal = ""; // Text displayed on answer buttons
 let imageCounter = 0;  //Current image index being used from data array
 
+
 // This function checks the users selection of animal (through the buttons) with the AI
 // It is then called from user answer buttons (onclick)
 // The buttonID is passed through as text
-
 // Example of multiway selection
+
+// -------- FUNCTION CHECK ANIMAL  ---------
+
 function CheckAnimal(identity) {
 
   switch(identity){
@@ -40,8 +44,10 @@ function CheckAnimal(identity) {
 
 // This function calls the API & returns the image analysis data:
 // It is very slow as there is a time delay -- uncontrollable 
-
 // Example of function
+
+// -------- FUNCTION GET AI ANIMAL ---------
+
 function getAIAnimal() {
     // This processes the image
     ImageAPI.analyseImage(
@@ -64,6 +70,8 @@ function getAIAnimal() {
     );
 }
 
+// -------- FUNCTION START IMAGE ---------
+
 // Setups the page for the start of the challenge
 function StartImage() {
     // Hides any of the current images
@@ -84,6 +92,9 @@ function StartImage() {
 
 // The next image is loaded up based off of the imageCounter
 // Sets a timeout on any image displayed
+
+// -------- FUNCTION GET NEXT IMAGE ---------
+
 function getNextImage() {
   // Check the end of the game (final question)
   if (imageCounter++ >= gamedata.length-1)
@@ -103,6 +114,9 @@ function getNextImage() {
 
 // Displays imageDIV if the visibility==true, otherwise the imageDIV is hidden
 // This can either be called directly or as a callback from timer expiration
+
+// -------- FUNCTION SET IMAGE VISIBILITY  ---------
+
 function SetImageVisibility( visibility ){
   switch (visibility) {
     case true:
@@ -115,6 +129,9 @@ function SetImageVisibility( visibility ){
 
 // This gets the imageDIV's visibility
 // Then it returns true if visible, otherwise it returns as false
+
+// -------- FUNCTION GET IMAGE VISIBILITY ---------
+
 function getImageVisible(){
   let visible = false;
   if (imageDIV.style.display == "block"){
@@ -124,6 +141,9 @@ function getImageVisible(){
 }
 
 //The results are displayed from the AI engine callback
+
+// -------- FUNCTION DISPLAY API RESULTS  ---------
+
 function displayAPIResults() {
   // This displays AI image analysis results
   let results = "<p>Object " + ": " + imageAPIresults + "</p>";
@@ -137,6 +157,9 @@ function displayAPIResults() {
 
 // I created a random return that returns a random integer
 // It will hopefully save some effort -- 
+
+// -------- FUNCTION BRANDOM ---------
+
 function bRandom(n) {
   return rndMember = Math.floor( Math.random()*n );
 }
@@ -149,6 +172,8 @@ function bRandom(n) {
 // ... the rest of the answers are placed through the remaining possibilities.
 // They are selected as a random set of 3 from 9 remaining answers.
 // The answer is always placed first, therefore the set is then shuffled for each question, the button choice changes
+
+// -------- FUNCTION RANDOMISE BUTTONS ---------
 
 function RandomizeButtons()
 // The current animal is found through the gamedata[imageCounter].animalType
