@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="testRnd()">Rnd</button>
+<p id="demo"></p>
+</body>
+
+<script language='javascript'>
+var busy=false; // used to block mutlple calls to test fns.
+// HTML paragraph reference for text output
+var TextOut=document.getElementById('demo');
+
+// Becky's random returns a random integer no, domain 0..n
+function bRandom(n) {
+  return rndMember = Math.floor( Math.random()*n );
+}
+
+// Write text to html paragraph
+function write( data ){
+    TextOut.innerHTML += data;
+}
+
+// Write text with new line to html paragraph
+function writeln( data ){
+    TextOut.innerHTML += data + "<BR>";
+}
+
+// Clear the output paragraph
+function clear(){
+    TextOut.innerHTML = "";
+}
+
+
+function testRnd(){
+  if (!busy)
+  {
+    busy=true
+    clear();
+    writeln("start");
+    for (i=0; i<10; i++)
+         writeln( "Rnd:" + i + ":" + bRandom(10));
+    write("end");
+    busy=false;
+  }
+}
+</script>
+</html>
