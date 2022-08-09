@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Login Lesson</title>
+</head>
+<body>
+    <div id="loginPage" class="page">
+        <h1 class="title">WELCOME</h1>
+        <div>
+            <button id="btnSignUp" class="topRightButton">Sign Up</button>
+        </div>
+        <div class="input">
+            <label id="loginEmailInput">Email</label>
+            <input id="loginEmailInput" type="text">
+        </div>
+        <div class="input">
+            <label for="loginPassInput">Password</label>
+            <input id="loginPassInput" type="password">
+        </div>
+        <div>
+            <button id="loginSubmit" class="btnSubmitStyle">Submit</button>
+        </div>
+    </div>
+    <div id="signUpPage" class="page" style="display: none;">
+        <h1 class="title">SIGN UP</h1>
+        <div>
+            <button id="btnLogin" class="topRightButton">Login</button>
+        </div>
+        <div class="input">
+            <label id="signUpEmailInput">Email</label>
+            <input id="signUpEmailInput" type="text">
+        </div>
+        <div class="input">
+            <label for="signUpPassInput">Password</label>
+            <input id="signUpPassInput" type="password">
+        </div>
+        <div class="input">
+            <label for="signUpDOBInput">Date of Birth</label>
+            <input id="signUpDOBInput" type="date">
+        </div>
+        <div>
+            <button id="signUpSubmit" class="btnSubmitStyle">Submit</button>
+        </div>
+    </div>
+    <div id="homePage" class="page" style="display: none">
+        <h1 id="titleHello" class="title fixedWidth">HELLO</h1>
+    </div>
+</body>
+</html>

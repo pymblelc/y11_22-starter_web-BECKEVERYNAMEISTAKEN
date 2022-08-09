@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+}
+h1 {
+    margin: 0;
+}
+
+/* button styling found at https://getcssscan.com/css-buttons-examples */
+button { 
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 12px 40px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+button:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+}
+
+button:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    button {
+        padding: 12px 50px;
+    }
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+    justify-content:center;
+    gap: 1.5rem;
+}
+
+.topRightButton {
+    position: fixed;
+    /*fixed pertains to initial containing block, ie. the viewport*/
+    right: .5rem;
+    top: .5rem;
+}
+
+.title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 1.05rem;
+}
+
+.fixedWidth {
+    width: 18rem;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    width: 20rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.input > input {
+    width: 12rem;
+}
+
+.btnSubmitStyle {
+    margin: 3rem;
+}
+
