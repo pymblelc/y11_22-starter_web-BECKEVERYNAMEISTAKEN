@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First JavaScript</h2>
+
+<button onclick="test()">Click</button>
+<p id="demo"></p>
+
+</body>
+
+<script language='javascript'>
+function test()
+{
+  write("start");
+  var Answer = 4;
+  var mySet = new Set();
+  mySet.add (Answer);
+  while( mySet.size <4)
+  {
+    rnd = myRandom(9);
+    if ( !mySet.has (rnd) )
+     mySet.add( rnd);
+  }
+  // Shuffle data so answer is not always at first element
+  finalset = new Set();
+  while( finalset.size < 4)
+    {
+        rndMember = Math.floor(Math.random()*9);
+        if (mySet.has(rndMember)) {
+            mySet.delete(rndMember);
+            finalset.add( rndMember );
+        }
+    } 
+
+  write("end");
+}
+
+function write( data )
+{
+    document.getElementById('demo').innerHTML += data + "<BR>";
+}
+function myRandom(n) {
+  // Randomize number of iterations to get
+  // final random number from the clock
+  //Returns no domain 0..n
+  let r = Date.now() % n;
+  for (i = 0; i <= r; i++) {
+    if (i == r) { 
+      r = Date.now() % n;
+      break;
+    }
+  }
+  console.log("r", r);
+  return r;
+}
+</script>
