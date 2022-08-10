@@ -29,7 +29,48 @@ document.getElementById("btnLogin").addEventListener("click", () => {
 //When submit button is clicked on the login page show the hello page
 document.getElementById("loginSubmit").addEventListener("click", () => {
     console.log("Submit clicked");
+    
     // TODO: Check the login info to see if the user exists
+//store data in array: 
+const EMAIL = document.querySelector("#signUpEmailInput");
+const PASSWORD = document.querySelector("#signUpPassInput");
+const DOB = document.querySelector("#signUpDOBInput");
+
+var DATABASE = [{
+     
+}];
+/*
+function callData(DATABASE) {
+  var return data = []
+  var record = {}
+  for (i = 0; i < DATABASE.length; i++) {
+    var index = -1;
+    result[i] = 0;
+
+
+  }
+*/
+callData (function () {
+document.getElementById("btnSignUp").addEventListener("click", () => {
+    Array.push(EMAIL);
+    Array.push(PASSWORD);
+    Array.push(DOB);
+    console.log(DATABASE);
+});
+}),
+
+
+
+
+/*
+document.getElementById("btnSignUp").addEventListener("click", () => {
+    window.localStorage.setItem(EMAIL);
+    window.localStorage.setItem(PASSWORD);
+    window.localStorage.setItem(DOB);
+});
+    */
+
+
     // TODO: Show a message/alert that the login was a success/failure 
     document.getElementById("loginPage").style.display = "none";
     document.getElementById("homePage").style.display = "flex";
